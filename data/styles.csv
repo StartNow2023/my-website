@@ -1,10 +1,10 @@
-图片,名称,款式,种类,我喜欢它哪里,详细说明
-images/styles/bangle-green.svg,冰种飘绿正圈手镯,手镯,翡翠,底子干净通透，一抹绿像溪水里漂着的水草，灵动不死板。,冰种底，飘阳绿花，圆条正圈。戴在手上光线一照有莹光，日常通勤也不会太张扬。圈口参考：56mm。
-images/styles/pendant-white.svg,羊脂白玉水滴吊坠,吊坠,和田玉,白得温润不刺眼，油性好，素面无雕工反而更显料子。,新疆籽料，白度好，质地细腻，表面有很自然的油脂光泽。素面水滴造型，配一根细金链就很好看。
-images/styles/ring-lavender.svg,紫罗兰蛋面戒指,戒指,翡翠,淡淡的粉紫色很温柔，配金色戒托有一种复古感。,糯冰种紫罗兰蛋面，颜色均匀偏粉紫。18K 黄金镶嵌，蛋面饱满，适合秋冬搭配。
-images/styles/earring-icy.svg,白冰水滴耳坠,耳饰,翡翠,几乎无色、清清透透，戴上显得人很干净。,高冰种无色水滴，镶嵌 18K 金。走动时轻轻晃，光线透进去很漂亮。
-images/styles/bracelet-green.svg,碧玉圆珠手串,手串,和田玉,颜色沉稳的菠菜绿，珠子圆润，盘久了会越来越亮。,"碧玉圆珠，约 8mm。颜色均匀，黑点少。
-碧玉挑货时注意黑点和绺裂，颜色越正越均匀越好。"
-images/styles/handpiece-seed.svg,带皮籽料福瓜把件,把件,和田玉,原石形状随形而雕，一块枣红皮被巧妙留成了瓜藤。,籽料带原生皮，利用皮色做俏色雕。握在手里大小刚好，适合日常盘玩。
-images/styles/safety-clasp.svg,晴水平安扣,吊坠,翡翠,清淡均匀的绿色，像雨后的天空，寓意也好。,晴水色平安扣，颜色淡而均匀，底子通透。平安扣寓意平平安安、圆满顺遂。
-images/styles/bangle-nephrite.svg,碧玉贵妃镯,手镯,和田玉,扁圆的贵妃镯型贴合手腕，碧玉的绿很有古典气质。,碧玉贵妃镯（椭圆形），颜色浓郁。贵妃镯更贴合手型，戴起来不容易晃。
+image,name,style,type,why,details
+images/styles/bangle-green.svg,Icy bangle with floating green,Bangle,Jadeite,"A clean, clear base with a wisp of green like waterweed drifting in a stream — lively, never heavy.","Icy base with vivid green floating flowers, round-bar bangle. Under light it has a soft floating glow, and it's understated enough for everyday wear. Size: 56 mm."
+images/styles/pendant-white.svg,Mutton-fat white teardrop pendant,Pendant,Hetian Jade,"A warm, gentle white that never looks harsh. Beautifully oily — no carving needed to show off the material.","Xinjiang seed material, very white and fine, with a natural oily luster. A plain teardrop shape; lovely on a thin gold chain."
+images/styles/ring-lavender.svg,Lavender cabochon ring,Ring,Jadeite,A soft pinkish lavender that feels vintage in a gold setting.,"Glutinous-icy lavender cabochon with an even, pink-leaning color. Set in 18k yellow gold with a full, rounded dome — perfect for autumn and winter."
+images/styles/earring-icy.svg,Icy white drop earrings,Earrings,Jadeite,"Almost colorless and crystal clear — they make you look fresh and clean.","High-icy colorless drops set in 18k gold. They sway gently as you move, and light shines right through them."
+images/styles/bracelet-green.svg,Green nephrite bead bracelet,Bracelet,Hetian Jade,"A calm spinach green, perfectly round beads, and they'll only get shinier with wear.","Green nephrite round beads, about 8 mm, with even color and few black specks.
+When choosing green nephrite, watch for black specks and fissures — the purer and more even the color, the better."
+images/styles/handpiece-seed.svg,Seed-material melon handpiece with skin,Handpiece,Hetian Jade,The carver followed the pebble's natural shape and turned a patch of jujube-red skin into the melon vine.,"Seed material with its original skin, carved to use the skin color. Just the right size to hold and rub every day."
+images/styles/safety-clasp.svg,Clear-water safety clasp,Pendant,Jadeite,"A light, even green like the sky after rain — and a lovely meaning too.","Clear-water green safety clasp: pale, even color on a transparent base. A safety clasp wishes for peace and a life that feels complete."
+images/styles/bangle-nephrite.svg,Green nephrite oval bangle,Bangle,Hetian Jade,"The oval ""imperial consort"" shape hugs the wrist, and the green has a classical elegance.","Green nephrite oval bangle with rich color. The oval shape follows the hand, so it doesn't slide around as much."

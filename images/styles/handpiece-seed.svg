@@ -2,5 +2,5 @@
 <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f1e4"/><stop offset="1" stop-color="#f8f4ea"/></linearGradient></defs>
 <rect width="600" height="700" fill="url(#bg)"/>
 <path d="M160.0 290.0 C 150.0 150.0, 400.0 130.0, 450.0 270.0 C 490.0 410.0, 380.0 530.0, 260.0 510.0 C 140.0 490.0, 170.0 390.0, 160.0 290.0 Z" fill="#efe7d2" stroke="#ffffff" stroke-opacity=".6" stroke-width="3"/><path d="M380.0 480.0 C 440.0 430.0, 460.0 350.0, 440.0 300.0" fill="none" stroke="#b56a3a" stroke-opacity=".55" stroke-width="22" stroke-linecap="round"/><ellipse cx="250.0" cy="250.0" rx="45" ry="20" fill="#fff" fill-opacity=".35" transform="rotate(-20 250.0 250.0)"/>
-<text x="300.0" y="666" text-anchor="middle" font-family="serif" font-size="26" fill="#6d7a74">示例 · 把件（占位图）</text>
+<text x="300.0" y="666" text-anchor="middle" font-family="serif" font-size="26" fill="#6d7a74">Sample · Handpiece (placeholder)</text>
 </svg>
