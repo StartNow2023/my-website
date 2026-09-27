@@ -1,63 +1,65 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>我喜欢的款式 · 喃喃玉语</title>
+<title>Favorites · Whispers of Jade</title>
+<meta name="description" content="An inspiration wall of jadeite and Hetian jade pieces I love.">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&text=%E5%96%83%E7%8E%89%E8%AF%AD&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html"><span class="logo-mark"></span>喃喃玉语 <span class="en">Whispers of Jade</span></a>
+    <a class="logo" href="index.html"><span class="logo-mark"></span>Whispers of Jade</a>
     <nav class="nav">
-      <a href="index.html">首页</a>
-      <a href="styles.html" class="active">我喜欢的款式</a>
-      <a href="knowledge.html">知识</a>
-      <a href="carving.html">雕刻寓意</a>
-      <a href="quiz.html">种水测验</a>
-      <a href="checklist.html">购买清单</a>
+      <a href="index.html">Home</a>
+      <a href="styles.html" class="active">Favorites</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="carving.html">Carvings</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="checklist.html">Checklist</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
   <section class="page-hero">
-    <h1>我喜欢的款式<span class="en">Favorites · Inspiration Wall</span></h1>
-    <p>看到心动的就收进来，顺手记下喜欢它的理由。点开图片可以看大图和详细说明。</p>
+    <h1>Favorites<span class="en">Inspiration Wall</span></h1>
+    <p>Pieces that caught my eye, each with a note on why I love it. Tap a picture for a larger view and details.</p>
     <div class="divider"></div>
   </section>
 
   <div class="filters">
-    <div class="row"><span class="label">款式 Style</span><div class="chips" id="f-style"></div></div>
-    <div class="row"><span class="label">种类 Type</span><div class="chips" id="f-type"></div></div>
+    <div class="row"><span class="label">Style</span><div class="chips" id="f-style"></div></div>
+    <div class="row"><span class="label">Type</span><div class="chips" id="f-type"></div></div>
   </div>
   <p class="count" id="count"></p>
   <div class="wall" id="wall"></div>
-  <p class="empty" id="empty" hidden>这个组合下还没有收藏，换个筛选看看吧～</p>
+  <p class="empty" id="empty" hidden>Nothing here yet for this combination — try another filter.</p>
 </main>
 
 <dialog class="lightbox" id="lightbox">
-  <button class="lb-close" id="lb-close" aria-label="关闭">×</button>
+  <button class="lb-close" id="lb-close" aria-label="Close">×</button>
   <div class="lb-inner">
     <div class="lb-img"><img id="lb-img" alt=""></div>
     <div class="lb-text">
       <div class="tags" id="lb-tags"></div>
       <h2 id="lb-title"></h2>
-      <h4>我喜欢它哪里</h4>
+      <h4>Why I love it</h4>
       <p id="lb-why"></p>
-      <h4>详细说明</h4>
+      <h4>Details</h4>
       <p id="lb-detail"></p>
     </div>
   </div>
 </dialog>
 
 <footer class="site-footer">
-  <div class="wrap">想添加新款式？把图片放进 images/styles/，再在 data/styles.csv 里加一行即可。</div>
+  <div class="wrap">Want to add a piece? Put the picture in images/styles/ and add one row to data/styles.csv.</div>
 </footer>
 <script src="js/styles.js"></script>
 <script>var a=document.querySelector(".nav .active");if(a)a.parentNode.scrollLeft=a.offsetLeft-a.parentNode.offsetWidth/2+a.offsetWidth/2;</script>

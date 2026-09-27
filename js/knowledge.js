@@ -1,41 +1,41 @@
-// 行话速查：想加新词条，照格式在下面加一行即可
-// [词条, 英文/拼音, 分类(翡翠/和田玉/通用), 解释]
+// Glossary — to add a term, copy a line and edit it.
+// [term, pinyin, category (Jadeite / Hetian / Both), explanation, Chinese (used only for search)]
 const TERMS = [
-  ["飘花", "floating flowers", "翡翠", "翡翠里颜色（多为绿色、蓝绿色）呈丝状、带状或云朵状分布，像花在水里飘动。冰种飘花是很受欢迎的品种，看的是花的颜色、形态和底子是否干净。"],
-  ["起胶", "gel-like glow", "翡翠", "种好、水足、结构细腻的翡翠，表面看起来像果冻、胶质一样柔润饱满，有一种\"胶感\"。起胶是种水好的表现，豆种一般不起胶。"],
-  ["荧光（莹光）", "adularescence-like glow", "翡翠", "行内说的\"起荧光\"是指高品质冰种、玻璃种翡翠在转动时，表面浮现一层蓝白色的柔和光晕，像月光一样。和紫外灯下的\"荧光反应\"不是一回事：紫外荧光常用来辅助判断是否注胶，但不能作为唯一依据。"],
-  ["皮色", "skin color", "和田玉", "和田玉籽料外层受铁、锰等矿物长期浸染形成的颜色，如洒金皮（金黄点状）、枣红皮、秋梨皮、黑皮等。真皮有过渡、沁入玉里；假皮是人工染色，颜色浮、不自然。翡翠原石的外壳也叫皮（如沙皮、蜡皮）。"],
-  ["棉", "cotton inclusions", "通用", "玉石里白色絮状、云雾状的包裹物，像一团团棉絮。棉多会影响透明度和美观；少量细小的棉则很常见，也是天然的证据之一。"],
-  ["纹", "healed lines", "通用", "也叫\"石纹\"，是玉石形成过程中已经愈合的纹理。特点是：表面摸不到、反光看表面是连续的、打光看光线能穿过。一般不影响结构，俗话说\"纹不碍事\"。"],
-  ["裂", "crack", "通用", "真正的开放性裂隙。特点是：指甲划过可能有阻滞感、反光看表面有断开、打光时光线在裂处被截断。裂会降低价值和耐用性，手镯有裂容易断。俗话说\"裂是伤\"。"],
-  ["绺", "fissure", "和田玉", "和田玉行话里对裂隙的称呼，常说\"绺裂\"。挑选时要重点看，尤其是手镯和手串。"],
-  ["种水", "texture & transparency", "翡翠", "\"种\"指内部结构颗粒的粗细紧密，\"水\"指透明度。两者常合在一起说，如\"种水好\"。详见本页\"种·水\"部分。"],
-  ["水头", "transparency", "翡翠", "翡翠的透明度。水头足即透明、有灵气，水头差则显得\"干\"\"闷\"。传统以光能透进 3 毫米为\"一分水\"。"],
-  ["底子 / 地张", "base", "翡翠", "翡翠里颜色以外的部分，也就是\"背景\"。底子干净、细腻、通透，颜色才会显得漂亮。常说\"底子好\"\"地张干净\"。"],
-  ["色根", "color root", "翡翠", "天然翡翠的绿色往往有一个颜色较深、较集中的地方，像颜色的\"根\"，从这里向外逐渐变淡。染色的 C 货通常没有色根。"],
-  ["苍蝇翅", "fly wings", "翡翠", "也称\"翠性\"：翡翠晶体解理面在光下反射出的片状闪光，像苍蝇翅膀。这是天然翡翠的特征之一（B 货也可能有，不能单独作为鉴定依据），颗粒越粗越容易看到。"],
-  ["春带彩", "lavender with green", "翡翠", "\"春\"指紫色，\"彩\"指绿色。同一件翡翠上同时有紫和绿，寓意吉祥。"],
-  ["福禄寿", "three colors", "翡翠", "一件翡翠上同时有三种颜色，通常是绿、紫（或红）、黄/白，寓意福、禄、寿齐全。"],
-  ["满绿", "full green", "翡翠", "整件翡翠都是绿色，没有白底。颜色又正又匀又通透的满绿非常珍贵。"],
-  ["癣", "dark patches", "翡翠", "翡翠中的黑色或暗绿色斑块、条带。常说\"绿随黑走\"，有时癣旁有绿。癣会影响美观。"],
-  ["石花", "stone flowers", "通用", "玉石里白色、较硬的团块或斑点，比棉更\"实\"，常见于翡翠和和田玉。"],
-  ["瓷底", "porcelain base", "翡翠", "底子像瓷器一样白而不透，透明度差，是种水较差的表现。"],
-  ["蜡状光泽 / 玻璃光泽", "lustre", "通用", "光泽类型。高品质翡翠多为玻璃光泽，亮而清冷；和田玉以油脂光泽为主。B 货翡翠常呈树脂光泽，偏\"塑料感\"。"],
-  ["油性 / 油润", "oiliness", "和田玉", "和田玉表面像涂了一层油一样滋润、光泽柔和，这是好料的重要标志。\"羊脂\"就是形容油润度极好。"],
-  ["羊脂白玉", "mutton-fat white", "和田玉", "和田玉中白度好、质地最细腻、油润如凝脂的顶级白玉。真正的羊脂级非常稀少，市面上此名称常被滥用，需看证书与实物。"],
-  ["水线", "water lines", "和田玉", "玉料中较透明的线状或带状纹理，青海料中常见，会被认为影响质感的均匀度。"],
-  ["僵", "stiff/white spots", "和田玉", "也称石僵、石脑，玉中白色、不透、质地较粗的部分，像石头一样。"],
-  ["沁色", "infiltration color", "和田玉", "外来物质长期渗入玉中形成的颜色，老玉、出土玉常见。市面上也有人为做沁，需谨慎。"],
-  ["糖色", "sugar color", "和田玉", "和田玉中黄褐、红褐色的部分，由铁元素沿裂隙渗入形成。整块都是糖色的称糖玉。"],
-  ["黑点", "black spots", "和田玉", "碧玉中常见的黑色小点（多为铬铁矿等矿物），黑点越少越好。"],
-  ["俏色", "color-play carving", "通用", "雕刻时巧妙利用玉料上不同颜色的部分，雕成相应题材，如用皮色雕成瓜藤、用绿色雕成叶子。俏色用得好会大大提升价值。"],
-  ["打灯", "flashlight test", "通用", "用小手电从背面或侧面照射玉石，看水头、裂纹和内部结构。看裂纹时要多角度打光。"],
-  ["圈口", "bangle size", "通用", "手镯内圈的直径，单位毫米。一般比手掌最宽处周长换算的尺寸稍小即可戴进去，最好店里试戴。"],
-  ["正圈 / 贵妃 / 扁口", "bangle shapes", "通用", "手镯形状：正圈是正圆形；贵妃镯是椭圆形，更贴合手腕；扁口（扁条）内平外圆，戴着舒适。另有圆条、方镯等。"],
-  ["蛋面", "cabochon", "通用", "被磨成椭圆形凸面的戒面，最能展示种水颜色，常用于戒指和吊坠镶嵌。"],
-  ["明料 / 赌石", "cut vs. rough", "翡翠", "明料是已经切开、能看到内部的料子；赌石是带皮未开的原石，内部好坏全凭经验判断，风险极高。"],
-  ["老坑 / 新坑", "old vs. new mine", "翡翠", "现在多用来形容质量：\"老坑\"指种老、结构致密的好料，\"新坑\"指结构较松、种嫩的料，并不严格指矿坑新旧。"],
-  ["泛灰 / 发闷", "grayish / dull", "翡翠", "颜色不鲜亮、透着灰调，或透明度差、看上去沉闷没灵气。"],
+  ["Floating flowers", "piāo huā", "Jadeite", "Color (usually green or blue-green) drifting through jadeite in wisps, bands or clouds, like flowers floating in water. Icy jadeite with floating flowers is very popular — judge the color and shape of the flowers and how clean the base is.", "飘花"],
+  ["Gel-like glow", "qǐ jiāo", "Jadeite", "Jadeite with good texture and water looks plump and soft on the surface, like jelly. This \"gel\" feel is a sign of a fine texture; bean-type jadeite normally doesn't have it.", "起胶"],
+  ["Floating glow", "yíng guāng", "Jadeite", "When fine icy or glass-type jadeite is turned, a soft bluish-white sheen seems to float across the surface, like moonlight. This is not the same as UV fluorescence, which is sometimes used as a hint of resin treatment but proves nothing by itself.", "荧光 莹光"],
+  ["Skin color", "pí sè", "Hetian", "Color on the outside of nephrite seed material, formed as iron and manganese minerals seep in over a long time — golden-speckled, jujube-red, autumn-pear or black skin. Real skin fades gradually into the jade; fake skin is dyed and looks like it sits on top. Jadeite rough also has a \"skin\".", "皮色"],
+  ["Cotton", "mián", "Both", "White, fluffy or cloudy inclusions inside jade, like tufts of cotton. A lot of cotton reduces transparency and beauty; a little fine cotton is very common and is also a sign of a natural stone.", "棉"],
+  ["Lines", "wén", "Both", "Also \"stone lines\": natural fractures that healed while the stone formed. You can't feel them, the surface reflection is unbroken, and light passes through. They usually don't matter — \"lines are harmless\".", "纹 石纹"],
+  ["Crack", "liè", "Both", "An open fracture. Your fingernail may catch on it, the surface reflection breaks, and a flashlight beam stops at it. Cracks lower value and durability — a cracked bangle can snap. \"A crack is an injury.\"", "裂"],
+  ["Fissure", "liǔ", "Hetian", "The nephrite trade's word for cracks, often said together as \"liu lie\". Check carefully, especially on bangles and bead bracelets.", "绺 绺裂"],
+  ["Texture & water", "zhǒng shuǐ", "Jadeite", "\"Zhong\" is how fine and dense the structure is; \"shui\" is transparency. They're usually mentioned together, as in \"good zhong shui\". See the Texture section above.", "种水"],
+  ["Water", "shuǐ tóu", "Jadeite", "Jadeite's transparency. Good water looks clear and alive; poor water looks \"dry\" or dull. Traditionally, light reaching 3 mm in is \"one-fen water\".", "水头"],
+  ["Base", "dǐ zi / dì zhāng", "Jadeite", "Everything in jadeite except the color — the \"background\". A clean, fine, clear base makes color look beautiful.", "底子 地张"],
+  ["Color root", "sè gēn", "Jadeite", "Natural green often has a darker, concentrated spot that fades outward, like a root. Dyed Type C jadeite usually has none.", "色根"],
+  ["Fly wings", "cāng ying chì", "Jadeite", "Flashes of light from crystal cleavage surfaces, like the wings of a fly. A feature of natural jadeite (Type B can show it too, so it isn't proof), easier to see in coarse grains.", "苍蝇翅 翠性"],
+  ["Spring with color", "chūn dài cǎi", "Jadeite", "\"Spring\" means lavender and \"color\" means green: a piece with both lavender and green, considered very auspicious.", "春带彩"],
+  ["Fortune, prosperity & longevity", "fú lù shòu", "Jadeite", "A piece with three colors — usually green, lavender (or red) and yellow/white — wishing for all three blessings.", "福禄寿"],
+  ["Full green", "mǎn lǜ", "Jadeite", "Green all over, with no white base. Full green that is pure, even and translucent is extremely precious.", "满绿"],
+  ["Dark patches", "xuǎn", "Jadeite", "Black or dark-green patches and streaks in jadeite. There's a saying that \"green follows black\" — green sometimes sits next to them. They spoil the look.", "癣"],
+  ["Stone flowers", "shí huā", "Both", "Harder, more solid white clumps or spots than cotton, seen in both jadeite and nephrite.", "石花"],
+  ["Porcelain base", "cí dǐ", "Jadeite", "A base that is white and opaque like porcelain — a sign of poor texture and water.", "瓷底"],
+  ["Luster", "guāng zé", "Both", "Fine jadeite has a glassy luster — bright and cool; nephrite has an oily luster. Type B jadeite often looks resinous, a bit like plastic.", "光泽 玻璃光泽 蜡状光泽"],
+  ["Oiliness", "yóu xìng", "Hetian", "Nephrite that looks softly moist, as if coated with a thin film of oil — a key sign of good material. \"Mutton-fat\" describes the very best.", "油性 油润"],
+  ["Mutton-fat white", "yáng zhī bái yù", "Hetian", "The top grade of white nephrite: very white, extremely fine and oily like congealed fat. True mutton-fat is very rare, and the name is often misused — check the certificate and the stone itself.", "羊脂白玉"],
+  ["Water lines", "shuǐ xiàn", "Hetian", "More transparent lines or bands in the material, common in Qinghai jade, and seen as making the texture less even.", "水线"],
+  ["Stiff spots", "jiāng", "Hetian", "Also \"stone brain\": white, opaque, coarse parts of the jade that look like ordinary rock.", "僵 石脑"],
+  ["Infiltration color", "qìn sè", "Hetian", "Color from outside substances seeping into jade over a long time, common on antique and excavated pieces. Artificial \"aging\" exists too — be careful.", "沁色"],
+  ["Sugar color", "táng sè", "Hetian", "Yellow-brown to red-brown areas in nephrite, from iron seeping in along cracks. A piece that is all sugar color is called sugar jade.", "糖色"],
+  ["Black specks", "hēi diǎn", "Hetian", "Small black dots common in green nephrite (mostly chromite and similar minerals). The fewer the better.", "黑点"],
+  ["Color-play carving", "qiào sè", "Both", "Using the different colors in one stone for different parts of a design — skin for a melon vine, green for a leaf. Done well, it greatly raises the value.", "俏色"],
+  ["Flashlight test", "dǎ dēng", "Both", "Shining a small flashlight through jade from the back or side to check water, cracks and structure. Check cracks from several angles.", "打灯"],
+  ["Bangle size", "quān kǒu", "Both", "The inner diameter of a bangle in millimeters. It just needs to pass over the widest part of your hand — try it on in the shop if you can.", "圈口"],
+  ["Bangle shapes", "zhèng quān / guì fēi", "Both", "Round bangles are perfectly circular; \"imperial consort\" bangles are oval and follow the wrist; flat bangles are flat inside and round outside for comfort. There are also round-bar and square bangles.", "正圈 贵妃 扁口"],
+  ["Cabochon", "dàn miàn", "Both", "A smooth, domed oval — the shape that best shows texture, water and color. Common in rings and pendants.", "蛋面"],
+  ["Cut vs. rough gamble", "míng liào / dǔ shí", "Jadeite", "Cut material has been opened so you can see inside; \"gambling stones\" are uncut rough with skin, and you can only guess what's inside — very risky.", "明料 赌石"],
+  ["Old mine / new mine", "lǎo kēng / xīn kēng", "Jadeite", "Today these describe quality rather than the mine's age: \"old mine\" means a dense, mature texture; \"new mine\" means a looser, younger texture.", "老坑 新坑"],
+  ["Grayish / dull", "fàn huī / fā mèn", "Jadeite", "Color that isn't bright and has a gray cast, or poor transparency that makes a piece look lifeless.", "泛灰 发闷"],
 ];
 
 (function () {
@@ -43,6 +43,7 @@ const TERMS = [
   const q = document.getElementById("q");
   const empty = document.getElementById("gl-empty");
   const filter = document.getElementById("g-filter");
+  const LABEL = { Jadeite: "Jadeite", Hetian: "Hetian jade", Both: "Both" };
   let cat = "";
 
   const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -56,14 +57,14 @@ const TERMS = [
   function render() {
     const k = q.value.trim();
     const kl = k.toLowerCase();
-    const list = TERMS.filter(([n, en, c, d]) =>
-      (!cat || c === cat) && (!kl || (n + en + d).toLowerCase().includes(kl))
+    const list = TERMS.filter(([n, py, c, d, zh]) =>
+      (!cat || c === cat) && (!kl || [n, py, d, zh].join(" ").toLowerCase().includes(kl))
     );
     gl.innerHTML = list
-      .map(([n, en, c, d]) => `
+      .map(([n, py, c, d]) => `
         <div class="card term">
-          <h4>${hi(n, k)}</h4>
-          <span class="tag${c === "和田玉" ? " gold" : ""}">${c}</span>
+          <h4>${hi(n, k)}<span class="py">${hi(py, k)}</span></h4>
+          <span class="tag${c === "Hetian" ? " gold" : ""}">${LABEL[c]}</span>
           <p>${hi(d, k)}</p>
         </div>`)
       .join("");

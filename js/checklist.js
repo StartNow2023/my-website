@@ -1,37 +1,37 @@
-// 购买检查清单：想加新条目，照格式在对应分组里加一行 ["标题", "小提示"]
+// Shopping checklist — to add an item, add ["Title", "Tip"] to a group below.
 const GROUPS = [
-  { icon: "👀", title: "先看整体", items: [
-    ["看光泽", "在自然光下看表面：翡翠好料是清亮的玻璃光泽，和田玉是柔和的油脂光泽。光泽发\"塑料感\"、蜡感太重要警惕。"],
-    ["看颜色是否自然", "颜色要有过渡、有色根，不能像浮在表面；在不同光源下（店里灯光、自然光、手机手电）都看一看，店里的射灯会让颜色显得更好。"],
-    ["看底子/质地", "底子是否干净，有没有明显的棉、黑点、癣、石花；和田玉看是否细腻、油润，有没有僵、水线。"],
+  { icon: "👀", title: "First look", items: [
+    ["Check the luster", "Look at the surface in daylight: fine jadeite has a bright, glassy luster; Hetian jade has a soft, oily one. Be wary of a plastic-like or overly waxy shine."],
+    ["Is the color natural?", "Color should shade gradually and have a root, not float on the surface. Look under different lights — shop lamp, daylight, your phone torch. Shop spotlights make color look better than it is."],
+    ["Check the base / texture", "Is the base clean? Any obvious cotton, black specks, dark patches or stone flowers? For nephrite, is it fine and oily, with no stiff spots or water lines?"],
   ]},
-  { icon: "🔦", title: "打光细看", items: [
-    ["打光看水头", "用手电从背面或侧面贴着照，看光能透进多深、光晕是否明亮均匀。"],
-    ["查裂纹（重点）", "多角度打光，看光线是否在某处\"断开\"；再侧着看表面反光有没有断线；用指甲轻轻划过可疑处。手镯要转一整圈仔细查。"],
-    ["分清\"纹\"和\"裂\"", "纹：摸不到、反光连续、光能穿过，一般无碍。裂：反光断开、光被截断，会影响价值和耐用。拿不准就问店员并请对方书面说明。"],
-    ["看结构和颗粒", "打光观察颗粒粗细、有没有苍蝇翅；翡翠表面若有细密的网状纹路（酸蚀纹），要警惕 B 货。"],
+  { icon: "🔦", title: "Flashlight check", items: [
+    ["Shine a light for transparency", "Hold a flashlight against the back or side: how deep does the light go, and is the glow bright and even?"],
+    ["Look for cracks (important!)", "Shine from several angles and see if the light \"stops\" somewhere; tilt the piece to see if the surface reflection breaks; run a fingernail over anything suspicious. Turn a bangle all the way round."],
+    ["Tell lines from cracks", "Lines: can't be felt, reflection unbroken, light passes through — usually fine. Cracks: reflection breaks, light is cut off — they hurt value and durability. If unsure, ask the seller to explain in writing."],
+    ["Look at structure and grain", "Check how coarse the grains are and whether you see fly wings. A fine web of lines on jadeite's surface (acid etching) is a warning sign of Type B."],
   ]},
-  { icon: "✋", title: "上手试试", items: [
-    ["试戴", "手镯要试圈口，戴进去后留约一指宽的余量比较舒服；吊坠看大小比例是否合适；戒指注意镶嵌是否牢固、戒圈能否调整。"],
-    ["检查雕工和抛光", "线条是否流畅、开脸（人物/佛像的脸）是否端正自然、抛光是否到位、边角有无崩口。"],
-    ["检查镶嵌", "金属是否有印记（如 Au750 表示 18K 金），爪子是否扣紧，背面是否留有看石头的空间。"],
+  { icon: "✋", title: "Try it on", items: [
+    ["Try it on", "For a bangle, check the size — about a finger's width of room once it's on is comfortable. For a pendant, check the proportions; for a ring, check the setting is secure and whether it can be resized."],
+    ["Check carving and polish", "Are the lines smooth? Is the face of a figure well-proportioned and natural? Is the polish even, with no chipped edges?"],
+    ["Check the setting", "Is the metal stamped (e.g. Au750 for 18k gold)? Are the prongs tight? Is the back open enough to see the stone?"],
   ]},
-  { icon: "📄", title: "问清楚", items: [
-    ["看证书", "要有权威机构证书（如国检 NGTC 或省级质检站）。翡翠应写\"翡翠\"或\"翡翠（天然）\"，写\"翡翠（处理）\"就是 B/C 货；和田玉证书写\"和田玉\"只说明是透闪石，不代表产地。"],
-    ["核对证书与实物", "对比证书上的照片、重量、尺寸是否和实物一致，回家后可在机构官网用编号查询真伪。"],
-    ["问产地和料子", "和田玉问清是新疆、青海、俄料还是韩料，是籽料还是山料；翡翠问种水等级。请店员把口头说法写在收据上。"],
-    ["问退换政策", "几天内可退换？是否支持无理由退货？退货是否扣费？最好写在票据上。"],
-    ["索要正规票据", "要发票或正规收据，写明品名、材质、重量、价格和店名。"],
+  { icon: "📄", title: "Ask", items: [
+    ["Ask for the certificate", "It should come from an accredited lab (e.g. NGTC, GIA, or a provincial testing center). Jadeite should say \"jadeite\" or \"jadeite (natural)\" — \"jadeite (treated)\" means Type B/C. For nephrite, \"Hetian jade\" only means tremolite, not where it's from."],
+    ["Match the certificate to the piece", "Compare the photo, weight and size on the certificate with the piece. At home, look up the number on the lab's website."],
+    ["Ask about origin and material", "For nephrite: Xinjiang, Qinghai, Russian or Korean? Seed or mountain material? For jadeite: what texture grade? Ask for what the seller says to be written on the receipt."],
+    ["Ask about returns", "How many days to return or exchange? No-questions-asked returns? Any fees? Get it written on the receipt."],
+    ["Get a proper receipt", "An invoice or receipt with the item name, material, weight, price and shop name."],
   ]},
-  { icon: "🧘", title: "买前冷静", items: [
-    ["价格心里有数", "事先在几家店、线上比过价格；太便宜的\"高货\"基本不存在，谨防\"捡漏\"心理。"],
-    ["确认自己真的喜欢", "离开柜台想一想：还会想着它吗？它适合我的日常穿搭吗？"],
-    ["拍照留档", "拍下实物、证书、票据，方便以后保养、维权或保险。"],
+  { icon: "🧘", title: "Before paying", items: [
+    ["Know the price range", "Compare prices at a few shops and online beforehand. A cheap \"top-grade\" piece basically doesn't exist — beware the bargain-hunting mindset."],
+    ["Make sure I really love it", "Step away from the counter for a moment: am I still thinking about it? Does it suit what I wear every day?"],
+    ["Take photos", "Photograph the piece, certificate and receipt — useful for care, disputes or insurance later."],
   ]},
 ];
 
 (function () {
-  const KEY = "jade-checklist-v1";
+  const KEY = "jade-checklist-en-v1";
   const list = document.getElementById("list");
   let saved = {};
   try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
@@ -54,7 +54,7 @@ const GROUPS = [
   function update() {
     const n = boxes.filter((b) => b.checked).length;
     document.getElementById("bar").style.width = `${(n / boxes.length) * 100}%`;
-    document.getElementById("done").textContent = n === boxes.length ? `全部完成 ✓ ${n}/${boxes.length}` : `已完成 ${n}/${boxes.length}`;
+    document.getElementById("done").textContent = n === boxes.length ? `All done ✓ ${n}/${boxes.length}` : `${n} of ${boxes.length} done`;
   }
   list.addEventListener("change", (e) => {
     if (e.target.type !== "checkbox") return;
