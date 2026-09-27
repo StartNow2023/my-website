@@ -53,10 +53,10 @@ h3 .en { font-size: .75em; margin-left: .4em; }
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.site-header .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; }
+.site-header .wrap { display: flex; flex-direction: column; align-items: stretch; padding-top: 10px; }
 .logo {
   font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--jade-deep);
-  text-decoration: none; white-space: nowrap; display: flex; align-items: center; gap: 8px;
+  text-decoration: none; white-space: nowrap; display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 .logo-mark {
   width: 26px; height: 26px; border-radius: 50%;
@@ -67,7 +67,7 @@ h3 .en { font-size: .75em; margin-left: .4em; }
 .logo-mark::after { /* 平安扣的孔 */
   content: ""; position: absolute; inset: 9px; border-radius: 50%; background: var(--ivory);
 }
-.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 6px -16px 0; padding: 0 16px 8px; justify-content: safe center; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a {
   white-space: nowrap; text-decoration: none; color: var(--muted);
@@ -77,10 +77,7 @@ h3 .en { font-size: .75em; margin-left: .4em; }
 .nav a.active { color: #fff; background: var(--jade); }
 
 @media (max-width: 760px) {
-  .site-header .wrap { flex-direction: column; align-items: stretch; gap: 0; padding-top: 8px; }
-  .logo { justify-content: center; }
-  .nav { margin: 6px -16px 0; padding: 0 16px 8px;
-    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+  .nav { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
   .nav a:last-child { margin-right: 32px; }
 }
 
@@ -205,7 +202,7 @@ dialog.lightbox::backdrop { background: rgba(30, 45, 40, .6); backdrop-filter: b
 /* ===== 知识页 ===== */
 .toc { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 20px 0 8px; }
 .toc a { text-decoration: none; }
-.section { scroll-margin-top: 90px; }
+.section { scroll-margin-top: 110px; }
 .section > h2 { border-bottom: 1px solid var(--line); padding-bottom: .4em; }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
