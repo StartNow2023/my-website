@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第 0 阶段 · 方位术语 · 喃喃玉语</title>
+<meta name="description" content="解剖学习第 0 阶段：解剖学姿势、上下前后、内侧外侧、近侧远侧和三个切面，附小测验。">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>喃喃玉语 <span class="en">Whispers of Jade</span></a>
+    <nav class="nav">
+      <a href="index.html">首页 Home</a>
+      <a href="styles.html">我喜欢的款式 Favorites</a>
+      <a href="knowledge.html">知识 Knowledge</a>
+      <a href="carving.html">雕刻寓意 Carvings</a>
+      <a href="quiz.html">种水测验 Quiz</a>
+      <a href="checklist.html">购买清单 Checklist</a>
+      <a href="anatomy.html" class="active">解剖学习 Anatomy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <h1>第 0 阶段 · 方位术语<span class="en">Stage 0 · Anatomical Terms</span></h1>
+    <p>方位术语是解剖学的"语言"。先学会它，后面看书、看图才知道"上面""外侧"说的到底是哪里。</p>
+    <div class="divider"></div>
+    <nav class="sub-nav">
+      <a class="chip" href="anatomy.html">学习路线 Roadmap</a>
+      <a class="chip on" href="anatomy-terms.html">0 方位术语</a>
+      <a class="chip" href="anatomy-bones.html">1 骨骼</a>
+    </nav>
+  </section>
+
+  <section class="section" id="pose">
+    <h2>第一步：解剖学姿势<span class="en">Anatomical Position</span></h2>
+    <div class="pose">
+      <div class="card fig" id="pose-fig"></div>
+      <div>
+        <p>所有方位术语都以这个<b>标准姿势</b>为准：</p>
+        <ul>
+          <li>身体直立，两眼平视前方</li>
+          <li>两臂自然下垂在身体两侧，<b>手掌朝前</b></li>
+          <li>两脚并拢，脚尖朝前</li>
+        </ul>
+        <p class="note">不管这个人实际上是躺着、趴着还是在运动，描述位置时都要想象他摆成这个姿势。</p>
+        <p class="note">左和右，永远指<b>被描述的那个人自己</b>的左右。他面对着你时，他的右手在你的左边。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="terms">
+    <h2>方位术语<span class="en">Directional Terms</span></h2>
+    <p>点一个术语，看图和例子。它们都是<b>成对</b>出现的，记的时候一对一对记。</p>
+    <div class="chips" id="term-chips"></div>
+    <div class="term-view">
+      <div class="card fig" id="term-fig"></div>
+      <div class="card term-text" id="term-text" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section" id="planes">
+    <h2>三个切面<span class="en">Three Planes</span></h2>
+    <p>想象用一把刀把身体切开。刀的方向不同，就是不同的切面。以后看 CT、核磁共振，或者书上的剖面图，都要先认出是哪个切面。</p>
+    <div class="grid3 planes" id="plane-cards"></div>
+    <p class="note">器官本身也可以切：沿着器官的长轴切叫<b>纵切面</b>，垂直于长轴切叫<b>横切面</b>。</p>
+  </section>
+
+  <section class="section" id="table">
+    <h2>速查表<span class="en">Cheat Sheet</span></h2>
+    <div class="table-scroll"><table class="cmp" id="term-table"></table></div>
+  </section>
+
+  <section class="section" id="test">
+    <h2 style="text-align:center">方位术语小测验<span class="en">Quiz · Terms</span></h2>
+    <p style="text-align:center;color:var(--muted)">每次随机抽 10 题。全对了，就可以去学第 1 阶段「骨骼」了。</p>
+    <div class="quiz card" id="quiz"></div>
+    <p style="text-align:center;margin-top:20px"><a class="btn ghost" href="anatomy-bones.html">下一阶段：骨骼 Bones →</a></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">喃喃玉语 · 解剖学习笔记。内容仅供学习参考，不构成医疗建议，身体不适请及时就医。示意图为本站自绘。</div>
+</footer>
+<script src="js/anatomy-common.js"></script>
+<script src="js/anatomy-terms.js"></script>
+<script>var a=document.querySelector(".nav .active");if(a)a.parentNode.scrollLeft=a.offsetLeft-a.parentNode.offsetWidth/2+a.offsetWidth/2;</script>
+</body>
+</html>
