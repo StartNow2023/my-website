@@ -1,4 +1,4 @@
-# 玉语 · Jade Notes
+# 喃喃玉语 · Whispers of Jade
 
 我的翡翠与和田玉个人网站：喜欢的款式、玉石知识、雕刻寓意、种水小测验、购买检查清单。
 纯静态网页（HTML + CSS + JS），不需要安装任何东西，直接用 GitHub Pages 发布。
