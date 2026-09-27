@@ -62,7 +62,7 @@ const TERMS = [
     gl.innerHTML = list
       .map(([n, en, c, d]) => `
         <div class="card term">
-          <h4>${hi(n, k)}<span class="py">${hi(en, k)}</span></h4>
+          <h4>${hi(n, k)}</h4>
           <span class="tag${c === "和田玉" ? " gold" : ""}">${c}</span>
           <p>${hi(d, k)}</p>
         </div>`)
