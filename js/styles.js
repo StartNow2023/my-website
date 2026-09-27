@@ -3,13 +3,13 @@
   // 筛选按钮的默认顺序；表格里出现的新款式会自动排在后面
   const STYLE_ORDER = ["手镯", "吊坠", "戒指", "耳饰", "手串", "把件"];
   const TYPE_ORDER = ["翡翠", "和田玉"];
-  const EN = {
-    "全部": "All", "手镯": "Bangle", "吊坠": "Pendant", "戒指": "Ring", "耳饰": "Earrings",
-    "手串": "Bracelet", "把件": "Handpiece", "翡翠": "Jadeite", "和田玉": "Hetian Jade",
-  };
 
   const $ = (id) => document.getElementById(id);
   const state = { style: "全部", type: "全部" };
+  // 支持从首页带参数进来，例如 styles.html?type=翡翠
+  const params = new URLSearchParams(location.search);
+  if (params.get("type")) state.type = params.get("type");
+  if (params.get("style")) state.style = params.get("style");
   let items = [];
 
   // 简单可靠的 CSV 解析：支持引号、引号内的逗号和换行
@@ -44,7 +44,7 @@
   function esc(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   }
-  const label = (v) => (EN[v] ? `${v} ${EN[v]}` : v);
+  const label = (v) => v;
 
   function buildChips(el, key, order) {
     const found = [...new Set(items.map((it) => it[key === "style" ? "款式" : "种类"]).filter(Boolean))];
@@ -79,7 +79,7 @@
       )
       .join("");
     $("empty").hidden = list.length > 0;
-    $("count").textContent = `共 ${list.length} 件 · ${list.length} piece${list.length === 1 ? "" : "s"}`;
+    $("count").textContent = `共 ${list.length} 件`;
   }
 
   function open(it) {

@@ -56,7 +56,7 @@ const MOTIFS = [
   document.getElementById("motifs").innerHTML = MOTIFS.map((m) => `
     <article class="card motif">
       <div class="glyph">${esc(m.g)}</div>
-      <h3>${esc(m.name)} <span class="en">${esc(m.en)}</span></h3>
+      <h3>${esc(m.name)}</h3>
       <div class="meaning">${esc(m.meaning)}</div>
       <p>${esc(m.text)}</p>
       ${m.tip ? `<div class="tip">💡 ${esc(m.tip)}</div>` : ""}
