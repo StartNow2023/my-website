@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>种水小测验 · 玉语 Jade Notes</title>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>玉语 <span class="en">Jade Notes</span></a>
+    <nav class="nav">
+      <a href="index.html">首页 Home</a>
+      <a href="styles.html">我喜欢的款式 Favorites</a>
+      <a href="knowledge.html">知识 Knowledge</a>
+      <a href="carving.html">雕刻寓意 Carvings</a>
+      <a href="quiz.html" class="active">种水测验 Quiz</a>
+      <a href="checklist.html">购买清单 Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="page-hero">
+    <h1>猜种水小测验<span class="en">Guess the Texture · Quiz</span></h1>
+    <p>根据描述和示意图，判断它是玻璃种、冰种、糯种还是豆种。示意图只是模拟透光效果，真实翡翠要上手、打灯看。</p>
+    <div class="divider"></div>
+  </section>
+  <div class="quiz card" id="quiz"></div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">玉语 Jade Notes · 个人学习笔记，内容仅供参考，购买贵重玉石请以权威鉴定证书为准。</div>
+</footer>
+<script src="js/quiz.js"></script>
+<script>var a=document.querySelector(".nav .active");if(a)a.parentNode.scrollLeft=a.offsetLeft-a.parentNode.offsetWidth/2+a.offsetWidth/2;</script>
+</body>
+</html>
