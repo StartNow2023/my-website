@@ -1,7 +1,6 @@
 // 猜种水小测验
 // 每题：a = 正确答案；tint = 示意图颜色；desc = 描述；why = 解释
 const OPTIONS = ["玻璃种", "冰种", "糯种", "豆种"];
-const OPT_EN = { "玻璃种": "Glass", "冰种": "Icy", "糯种": "Glutinous", "豆种": "Bean" };
 
 // 示意图参数：透明度越低越透；blur 越大越朦胧；grain 是颗粒感
 const LOOK = {
@@ -72,7 +71,7 @@ const QUESTIONS = [
       <div class="progress"><span style="width:${(idx / order.length) * 100}%"></span></div>
       ${visual(q)}
       <p class="q-text">${q.desc}</p>
-      <div class="options">${OPTIONS.map((o) => `<button class="option" data-o="${o}">${o}<br><small class="en">${OPT_EN[o]}</small></button>`).join("")}</div>
+      <div class="options">${OPTIONS.map((o) => `<button class="option" data-o="${o}">${o}</button>`).join("")}</div>
       <div id="fb"></div>`;
     box.querySelector(".options").onclick = (e) => {
       const b = e.target.closest(".option");
@@ -93,9 +92,9 @@ const QUESTIONS = [
     const last = idx === order.length - 1;
     box.querySelector("#fb").innerHTML = `
       <div class="feedback ${ok ? "ok" : "no"}">
-        <b>${ok ? "✓ 答对了！Correct" : `✗ 不对哦，正确答案是「${q.a}」`}</b>${q.why}
+        <b>${ok ? "✓ 答对了！" : `✗ 不对哦，正确答案是「${q.a}」`}</b>${q.why}
       </div>
-      <div style="text-align:right"><button class="btn" id="next">${last ? "查看成绩 See score" : "下一题 Next →"}</button></div>`;
+      <div style="text-align:right"><button class="btn" id="next">${last ? "查看成绩" : "下一题 →"}</button></div>`;
     const next = box.querySelector("#next");
     next.focus({ preventScroll: true });
     next.onclick = () => { if (last) result(); else { idx++; show(); box.scrollIntoView({ behavior: "smooth", block: "start" }); } };
@@ -111,12 +110,12 @@ const QUESTIONS = [
     box.innerHTML = `
       <div class="result">
         <div class="progress"><span style="width:100%"></span></div>
-        <p style="color:var(--muted);margin:24px 0 0">你的得分 Your score</p>
+        <p style="color:var(--muted);margin:24px 0 0">你的得分</p>
         <div class="score">${score} / ${n}</div>
         <p>${msg}</p>
         <p style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px">
-          <button class="btn" id="again">再来一次 Try again</button>
-          <a class="btn ghost" href="knowledge.html#feicui">复习种水 Review</a>
+          <button class="btn" id="again">再来一次</button>
+          <a class="btn ghost" href="knowledge.html#feicui">复习种水</a>
         </p>
       </div>`;
     box.querySelector("#again").onclick = start;
